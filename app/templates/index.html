@@ -1,0 +1,272 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="zerogrid">
+		<div class="callbacks_container">
+			<ul class="rslides" id="slider4">
+				<li>
+					<img src={{url_for('static', filename='images/banner1.jpg') }} alt="">
+					<div class="caption">
+						<h2>We've got the best spareribs in town.</h2></br>
+						<p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo,quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. </p>
+					</div>
+				</li>
+				<li>
+					<img src={{url_for('static', filename='images/banner2.jpg') }} alt="">
+					<div class="caption">
+						<h2>If food is an experience, then you'll find it at the restaurant.</h2></br>
+						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					</div>
+				</li>
+				<li>
+					<img src={{url_for('static', filename='images/banner3.jpg') }} alt="">
+					<div class="caption">
+						<h2>Enjoy our take-away menu.</h2></br>
+						<p>At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+<section id="container" class="index-page">
+	<div class="wrap-container zerogrid">
+
+		<!-----------------content-box-2-------------------->
+		<section class="content-box box-2">
+			<div class="zerogrid">
+
+				<div class="row wrap-box"><!--Start Box-->
+
+
+					<div class="box nav_bar">
+						<nav>
+   						<ul>
+    						<li><a class="nav_a" href="#">Main Ingredient</a>
+							<ul class="fallback">
+								{% for item in main_ingr %}
+									<li><a class="nav_a" href="#">{{ item.name}}</a></li>
+        						{% endfor %}
+							</ul>
+							</li>
+    						<li><a class="nav_a" href="#">Global Cuisines</a>
+     						 <ul class="fallback">
+        						{% for item in global_ %}
+									<li><a class="nav_a" href="#">{{ item.name}}</a></li>
+        						{% endfor %}
+							 </ul>
+    						</li>
+    						<li><a class="nav_a" href="#">Preparation</a>
+      						<ul class="fallback">
+        						{% for item in preparation %}
+									<li><a class="nav_a" href="#">{{ item.name}}</a></li>
+        						{% endfor %}
+      						</ul>
+							</li>
+							<li><a class="nav_a" href="#">Meal Types</a>
+								<ul class="fallback">
+        							{% for item in meal_type %}
+										<li><a class="nav_a" href="#">{{ item.name}}</a></li>
+        							{% endfor %}
+      							</ul>
+
+							</li>
+
+  						</ul>
+						<hr class="line">
+						</nav>
+					</div>
+
+					<div class="content" style="margin-top: 70px;">
+						<div class="row">
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Menu Card<b></b></span>
+									<img src={{url_for('static', filename='images/menu.jpg') }} alt="">
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Fast Food<b></b></span>
+									<img src={{url_for('static', filename='images/fast-food.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Reservation<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Chef<b></b></span>
+									<img src={{url_for('static', filename='images/chef.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Preview<b></b></span>
+									<img src={{url_for('static', filename='images/preview.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<div class="box-item">
+									<span class="ribbon">Text Heading<b></b></span>
+									<img src={{url_for('static', filename='images/reservation.jpg') }}>
+									<p>The sliding menucard will surely impress your customers! Set up several pages and display them side by side, just as on a paper menucard!</p>
+									<a href="#" class="button button-1">Detail</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+
+		</section>
+	</div>
+</section>
+
+<script src={{url_for('static', filename='js/jquery-1.11.3.min.js')}}></script>
+
+<script src={{url_for('static', filename='js/responsiveslides.min.js')}}></script>
+<script>
+	$(function () {
+	  // Slideshow 4
+	  $("#slider4").responsiveSlides({
+		auto: true,
+		pager: false,
+		nav: false,
+		speed: 500,
+		namespace: "callbacks",
+		before: function () {
+		  $('.events').append("<li>before event fired.</li>");
+		},
+		after: function () {
+		  $('.events').append("<li>after event fired.</li>");
+		}
+	  });
+	});
+	$('nav li ul').hide().removeClass('fallback');
+$('nav li').hover(
+  function () {
+    $('ul', this).stop().slideDown(100);
+  },
+  function () {
+    $('ul', this).stop().slideUp(100);
+  }
+);
+
+</script>
+
+
+{% endblock %}

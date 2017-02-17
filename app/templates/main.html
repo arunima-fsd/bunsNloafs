@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Buns N Loafs</title>
+
+<!--	<link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}"> -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/slide.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/zerogrid.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div class="wrap-body">
+		<div class="top">
+			<div class="zerogrid">
+				<ul class="number f-left">
+					<li class="mail"><p>ContacUs: bunsnloafs@gmail.com</p></li>
+					<li class="phone"><p>08 88888 88888</p></li>
+				</ul>
+				<ul class="top-social f-right">
+					<li><a href="#"><i></i></a></li>
+					<li><a href="#"><i></i></a></li>
+					<li><a href="#"><i></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		{%block content%}
+		{%endblock%}
+
+	</div>
+
+
+
+</body>
+
+</html>
