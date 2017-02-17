@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 
 
@@ -10,9 +11,10 @@ from flask import Flask
 
 app = Flask(__name__)
 app.config.from_object('config')
+db = SQLAlchemy(app)
 
 
 #to avoid circular import error
 
 
-from app import views
+from app import views, models
