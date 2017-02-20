@@ -62,7 +62,7 @@ section:after, section:before{clear: both; content: '\0020'; display: block; vis
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
 html, body {width:100%; padding:0; margin:0;}
-body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif;font-family: 'Goudy Bookletter 1911',Georgia,serif;}
+body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif; font-family: 'Goudy Bookletter 1911',Georgia,serif;}
 body .wrap-body{}
 
 /* --Line-- */
@@ -312,16 +312,23 @@ a.button.bt2 {}
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Contact-------------------------------- */
 /* ---------------------------------------------------------------------------- */
-#contact_form {padding:0px 25px;}
 
-#contact label {cursor:pointer;margin:5px 0;display:block;font-weight:bold;}
 
-#contact input {display:block;width:100%;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;color:#000;	border:1px solid #654e2d;padding:13px;margin: 5px 0 25px 0;font-size: 16px;max-height: 45px;}
+#cuisine label {cursor:pointer;margin:5px 0;display:block;font-weight:bold;}
 
-#contact textarea {display:block;width:100%;height:200px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background-color:#fff; color:#000;	border:1px solid #654e2d;padding:10px;margin: 5px 0 25px 0;}
+#cuisine input {display:block;width:100%;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;color:#000;	border:1px solid #654e2d;padding:13px;margin: 5px 0 25px 0;font-size: 16px;max-height: 45px;}
 
-#contact .sendButton {cursor:pointer;background-color:#654e2d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;;width:35%;color:#ffffff;}
-#contact .sendButton:hover {opacity: 0.8;}
+#cuisine select{display:block;width:100%;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;color:#000;	border:1px solid #654e2d;padding:13px;margin: 5px 0 25px 0;font-size: 16px;max-height: 45px;}
+#cuisine textarea {display:block;width:100%;height:200px; border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;background-color:#fff; color:#000;	border:1px solid #654e2d;padding:10px;margin: 5px 0 25px 0;}
+
+#cuisine .sendButton {cursor:pointer;background-color:#654e2d;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;;width:35%;color:#ffffff;}
+#cuisine .sendButton:hover {opacity: 0.8;}
+
+#cuisine_form{margin:20px 100px 50px 100px;}
+#cuisine_title{font-size: 30px;color: #654e2d;text-shadow: 1px 1px 1px #FFFFFF;font-style: normal;font-weight: 500;margin-bottom: 10px; text-align: center; padding-bottom: 40px;}
+.cuisine_option{font-size: 20px; color: #654E2D; margin-left: 2px; margin-bottom: 5px;}
+.form_select{font-size: 20px; color: #654E2D; font-family: 'Goudy Bookletter 1911',Georgia,serif;}
+
 
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Crumbs---------------------------------- */

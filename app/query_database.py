@@ -1,28 +1,26 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Global, Preparation, MealType, MainIngredient
+from app import db
+from models import Global, Preparation, MainIngredient, MealType, Cuisine
 
-
-engine = create_engine('sqlite:///test.db')
-Base.metadata.bind = engine
-DBSession = sessionmaker()
-DBSession.bind = engine
-session = DBSession()
 
 
 def get_all_global():
-    items = session.query(Global).all()
+    items = db.session.query(Global).all()
     return items
 
 def get_all_preparation():
-    items = session.query(Preparation).all()
+    items = db.session.query(Preparation).all()
     return items
 
 def get_all_mealtype():
-    items = session.query(MealType).all()
+    items = db.session.query(MealType).all()
     return items
 
 def get_all_mainingr():
-    items = session.query(MainIngredient).all()
+    items = db.session.query(MainIngredient).all()
     return items
 
+def addCuisine(title, description, global_, preparation, meal_type, main_ingr, filename, url):
+    cuisine = Cuisine(title=title, description=description, global_=global_, preparation=preparation,
+                      mealtype=meal_type, main_ingr=main_ingr, image_filename=filename, image_url=url)
+    db.session.add(cuisine)
+    db.session.commit()

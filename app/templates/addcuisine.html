@@ -12,54 +12,112 @@
 		<div id="main-content">
 			<div class="wrap-content">
 				<div class="row">
-                    <div class="col-2-3">
-						<div class="wrap-col">
-							<div class="contact">
-								<div id="contact_form">
+					<div class="wrap-col" id="cuisine_form">
+						<h2 id="cuisine_title">Add your magical Cuisine.</h2>
+							<form name="cuisine" id="cuisine" method="post" action="" enctype="multipart/form-data">
+								{{form.csrf_token}}
 
-									<form name="contact" id="contact" method="post" action="reservation.php">
-										<label class="row">
-											<div class="col-1-2">
-												<div class="wrap-col">
-													<input type="text" name="name" id="name" placeholder="Enter name" required="required" />
-												</div>
-											</div>
-											<div class="col-1-2">
-												<div class="wrap-col">
-													<input type="email" name="email" id="email" placeholder="Enter email" required="required" />
-												</div>
-											</div>
-										</label>
-										<label class="row">
-											<div class="col-2-4">
-												<div class="wrap-col">
-												<input type="text" name="subject" id="subject" placeholder="Subject" required="required" />
-												</div>
-											</div>
-											<div class="col-1-4">
-												<div class="wrap-col">
-												<input type="date"  name="date" id="date" placeholder="Date"/>
-												</div>
-											</div>
-											<div class="col-1-4">
-												<div class="wrap-col">
-												<input type="time"  name="time" id="time" placeholder="Time"/>
-												</div>
-											</div>
-										</label>
-										<label class="row">
-											<div class="wrap-col">
-												<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
-												placeholder="Message"></textarea>
-											</div>
-										</label>
-										<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
-									</form>
+								<label class="row">
+									<div class="wrap-col">
+										<h2 class="cuisine_option">What's it called?</h2>
+									</div>
+								</label>
+
+								<label class="row">
+									<div class="wrap-col">
+										{{form.title}}
+									</div>
+								</label>
+
+								<label class="row">
+									<div class="col-2-4">
+										<div class="wrap-col">
+											<h2 class="cuisine_option">Main Ingredient</h2>
+
+										</div>
+									</div>
+
+									<div class="col-2-4">
+										<div class="wrap-col">
+											<h2 class="cuisine_option">Global Origin</h2>
+										</div>
+									</div>
+
+								</label>
 
 
-								</div>
-							</div>
-						</div>
+								<label class="row">
+									<div class="col-2-4">
+										<div class="wrap-col">
+
+											{{form.main_ingr(class="form_select")}}
+										</div>
+									</div>
+
+									<div class="col-2-4">
+										<div class="wrap-col">
+											{{form.global_(class_="form_select")}}
+										</div>
+									</div>
+
+								</label>
+
+								<label class="row">
+									<div class="col-2-4">
+										<div class="wrap-col">
+											<h2 class="cuisine_option">Preparation Method</h2>
+
+										</div>
+									</div>
+
+									<div class="col-2-4">
+										<div class="wrap-col">
+											<h2 class="cuisine_option">Meal Type</h2>
+										</div>
+									</div>
+
+								</label>
+
+
+								<label class="row">
+									<div class="col-2-4">
+										<div class="wrap-col">
+
+											{{form.preparation(class_ = "form_select")}}
+										</div>
+									</div>
+
+									<div class="col-2-4">
+										<div class="wrap-col">
+											{{form.meal_type(class_ = "form_select")}}
+
+										</div>
+									</div>
+
+								</label>
+
+								<label class="row">
+									<div class="wrap-col">
+										<h2 class="cuisine_option">Tell us more about your creation.</h2>
+									</div>
+								</label>
+
+
+								<label class="row">
+									<div class="wrap-col">
+										{{form.description(rows="4", cols="25")}}
+									    </div>
+								</label>
+
+								<label class="row">
+									<div class="wrap-col">
+										{{form.cuisine_img(class_ ="form_select")}}
+									</div>
+								</label>
+
+
+								<center><input class="sendButton" type="submit" name="Submit" value="Submit"></center>
+							</form>
 					</div>
 				</div>
 			</div>
